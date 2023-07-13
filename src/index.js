@@ -8,14 +8,12 @@ server.use(cors());
 server.use(express.json());
 
 async function getConnection() {
-  const connection = await mysql.createConnection(
-    {
-      host: "localhost",
-      user: "root",
-      password: "snout-jitters-unbend",
-      database: "Netflix",
-    }
-  );
+  const connection = await mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '#Irenetp1991',
+    database: 'Netflix',
+  });
 
   connection.connect();
 
@@ -28,11 +26,9 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-
-
 // endpoints
 server.get('/movies', async (req, res) => {
-  const selectMovies = "SELECT * FROM movies";
+  const selectMovies = 'SELECT * FROM movies';
   const connection = await getConnection();
   const [results] = await connection.query(selectMovies);
   console.log(results);
