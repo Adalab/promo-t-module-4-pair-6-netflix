@@ -12,7 +12,7 @@ async function getConnection() {
     {
       host: "localhost",
       user: "root",
-      password: "",
+      password: "snout-jitters-unbend",
       database: "Netflix",
     }
   );
@@ -37,5 +37,6 @@ server.get('/movies', async (req, res) => {
   const [results] = await connection.query(selectMovies);
   console.log(results);
   connection.end();
-  res.json(results);
+  res.json({success: true, movies: results});
+  //res.json(results);
 });
