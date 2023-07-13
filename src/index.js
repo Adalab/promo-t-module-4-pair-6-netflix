@@ -12,7 +12,7 @@ async function getConnection() {
     {
       host: "localhost",
       user: "root",
-      password: "snout-jitters-unbend",
+      password: "",
       database: "Netflix",
     }
   );
