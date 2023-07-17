@@ -33,5 +33,13 @@ server.get('/movies', async (req, res) => {
   const [results] = await connection.query(selectMovies);
   console.log(results);
   connection.end();
-  res.json(results);
+  res.json({
+    success: true,
+    movies: results,
+  });
 });
+
+//servidor estatico
+
+const staticServerPathWeb = './src/public-react';
+server.use(express.static(staticServerPathWeb));
