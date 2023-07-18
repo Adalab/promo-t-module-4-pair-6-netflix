@@ -41,5 +41,5 @@ server.get('/movies', async (req, res) => {
 
 //servidor estatico
 
-const staticServerPathWeb = './src/public-react';
+const staticServerPathWeb = './src/public-movies-images/';
 server.use(express.static(staticServerPathWeb));
