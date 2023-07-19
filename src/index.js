@@ -12,7 +12,7 @@ async function getConnection() {
   const connection = await mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
-    password: process.env.DB_PASS, 
+    password: process.env.DB_PASS,
     database: 'netflix',
     port: 3306,
   });
@@ -43,5 +43,5 @@ server.get('/movies', async (req, res) => {
 
 //servidor estatico
 
-const staticServerPathWeb = './src/public-movies-images/';
+const staticServerPathWeb = './src/public-movies-images';
 server.use(express.static(staticServerPathWeb));
