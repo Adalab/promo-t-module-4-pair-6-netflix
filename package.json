@@ -11,11 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-<<<<<<< HEAD
-    "env": "^0.0.2",
-=======
     "dotenv": "^16.3.1",
->>>>>>> 57a42c9bc448d63490acb268e8cab9782e6d2de4
     "express": "^4.17.1",
     "mysql2": "^3.5.1"
   }
