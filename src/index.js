@@ -9,10 +9,11 @@ server.use(express.json());
 
 async function getConnection() {
   const connection = await mysql.createConnection({
-    host: 'localhost',
+    host: '127.0.0.1',
     user: 'root',
     password: process.env.DB_PASS, 
-    database: 'Netflix',
+    database: 'netflix',
+    port: 3306,
   });
 
   connection.connect();
